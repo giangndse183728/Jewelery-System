@@ -1,2 +1,1 @@
-# Orchid collection 
-Using react, mock api, MUI...
+# Jewelery system
