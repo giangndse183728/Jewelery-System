@@ -4,6 +4,7 @@ using BusinessObjects.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BusinessObjects.Migrations
 {
     [DbContext(typeof(JssatsContext))]
-    partial class JssatsContextModelSnapshot : ModelSnapshot
+    [Migration("20240728134244_JSSATSV1")]
+    partial class JSSATSV1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -68,7 +71,7 @@ namespace BusinessObjects.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Bills", (string)null);
+                    b.ToTable("Bills");
                 });
 
             modelBuilder.Entity("BusinessObjects.Models.BillJewelry", b =>
@@ -130,7 +133,7 @@ namespace BusinessObjects.Migrations
 
                     b.HasIndex("JewelryId");
 
-                    b.ToTable("BillJewelries", (string)null);
+                    b.ToTable("BillJewelries");
                 });
 
             modelBuilder.Entity("BusinessObjects.Models.BillPromotion", b =>
@@ -159,7 +162,7 @@ namespace BusinessObjects.Migrations
 
                     b.HasIndex("PromotionId");
 
-                    b.ToTable("BillPromotions", (string)null);
+                    b.ToTable("BillPromotions");
                 });
 
             modelBuilder.Entity("BusinessObjects.Models.Counter", b =>
@@ -181,7 +184,7 @@ namespace BusinessObjects.Migrations
 
                     b.HasKey("CounterId");
 
-                    b.ToTable("Counters", (string)null);
+                    b.ToTable("Counters");
 
                     b.HasData(
                         new
@@ -244,7 +247,7 @@ namespace BusinessObjects.Migrations
 
                     b.HasKey("CustomerId");
 
-                    b.ToTable("Customers", (string)null);
+                    b.ToTable("Customers");
 
                     b.HasData(
                         new
@@ -308,7 +311,7 @@ namespace BusinessObjects.Migrations
 
                     b.HasIndex("PromotionId");
 
-                    b.ToTable("CustomerPromotions", (string)null);
+                    b.ToTable("CustomerPromotions");
                 });
 
             modelBuilder.Entity("BusinessObjects.Models.Gem", b =>
@@ -336,7 +339,7 @@ namespace BusinessObjects.Migrations
 
                     b.HasKey("GemId");
 
-                    b.ToTable("Gems", (string)null);
+                    b.ToTable("Gems");
 
                     b.HasData(
                         new
@@ -344,7 +347,7 @@ namespace BusinessObjects.Migrations
                             GemId = 1,
                             BuyPrice = 300m,
                             City = "Ha Noi",
-                            LastUpdated = new DateTimeOffset(new DateTime(2024, 7, 29, 0, 11, 32, 242, DateTimeKind.Unspecified).AddTicks(4681), new TimeSpan(0, 7, 0, 0, 0)),
+                            LastUpdated = new DateTimeOffset(new DateTime(2024, 7, 28, 20, 42, 43, 833, DateTimeKind.Unspecified).AddTicks(6390), new TimeSpan(0, 7, 0, 0, 0)),
                             SellPrice = 400m,
                             Type = "Ruby"
                         },
@@ -353,7 +356,7 @@ namespace BusinessObjects.Migrations
                             GemId = 2,
                             BuyPrice = 400m,
                             City = "Ha Noi",
-                            LastUpdated = new DateTimeOffset(new DateTime(2024, 7, 29, 0, 11, 32, 242, DateTimeKind.Unspecified).AddTicks(4684), new TimeSpan(0, 7, 0, 0, 0)),
+                            LastUpdated = new DateTimeOffset(new DateTime(2024, 7, 28, 20, 42, 43, 833, DateTimeKind.Unspecified).AddTicks(6398), new TimeSpan(0, 7, 0, 0, 0)),
                             SellPrice = 500m,
                             Type = "Sapphire"
                         },
@@ -362,7 +365,7 @@ namespace BusinessObjects.Migrations
                             GemId = 3,
                             BuyPrice = 500m,
                             City = "Ha Noi",
-                            LastUpdated = new DateTimeOffset(new DateTime(2024, 7, 29, 0, 11, 32, 242, DateTimeKind.Unspecified).AddTicks(4687), new TimeSpan(0, 7, 0, 0, 0)),
+                            LastUpdated = new DateTimeOffset(new DateTime(2024, 7, 28, 20, 42, 43, 833, DateTimeKind.Unspecified).AddTicks(6400), new TimeSpan(0, 7, 0, 0, 0)),
                             SellPrice = 600m,
                             Type = "Emerald"
                         },
@@ -371,7 +374,7 @@ namespace BusinessObjects.Migrations
                             GemId = 4,
                             BuyPrice = 500m,
                             City = "Ha Noi",
-                            LastUpdated = new DateTimeOffset(new DateTime(2024, 7, 29, 0, 11, 32, 242, DateTimeKind.Unspecified).AddTicks(4689), new TimeSpan(0, 7, 0, 0, 0)),
+                            LastUpdated = new DateTimeOffset(new DateTime(2024, 7, 28, 20, 42, 43, 833, DateTimeKind.Unspecified).AddTicks(6402), new TimeSpan(0, 7, 0, 0, 0)),
                             SellPrice = 600m,
                             Type = "Tektite"
                         },
@@ -380,7 +383,7 @@ namespace BusinessObjects.Migrations
                             GemId = 5,
                             BuyPrice = 500m,
                             City = "Ha Noi",
-                            LastUpdated = new DateTimeOffset(new DateTime(2024, 7, 29, 0, 11, 32, 242, DateTimeKind.Unspecified).AddTicks(4691), new TimeSpan(0, 7, 0, 0, 0)),
+                            LastUpdated = new DateTimeOffset(new DateTime(2024, 7, 28, 20, 42, 43, 833, DateTimeKind.Unspecified).AddTicks(6404), new TimeSpan(0, 7, 0, 0, 0)),
                             SellPrice = 600m,
                             Type = "Peridot"
                         });
@@ -414,7 +417,7 @@ namespace BusinessObjects.Migrations
 
                     b.HasKey("GoldId");
 
-                    b.ToTable("Golds", (string)null);
+                    b.ToTable("Golds");
 
                     b.HasData(
                         new
@@ -422,7 +425,7 @@ namespace BusinessObjects.Migrations
                             GoldId = 1,
                             BuyPrice = 1000m,
                             City = "Ha Noi",
-                            LastUpdated = new DateTimeOffset(new DateTime(2024, 7, 29, 0, 11, 32, 242, DateTimeKind.Unspecified).AddTicks(4722), new TimeSpan(0, 7, 0, 0, 0)),
+                            LastUpdated = new DateTimeOffset(new DateTime(2024, 7, 28, 20, 42, 43, 833, DateTimeKind.Unspecified).AddTicks(6425), new TimeSpan(0, 7, 0, 0, 0)),
                             SellPrice = 1200m,
                             Type = "9999"
                         },
@@ -431,7 +434,7 @@ namespace BusinessObjects.Migrations
                             GoldId = 2,
                             BuyPrice = 1200m,
                             City = "Ha Noi",
-                            LastUpdated = new DateTimeOffset(new DateTime(2024, 7, 29, 0, 11, 32, 242, DateTimeKind.Unspecified).AddTicks(4725), new TimeSpan(0, 7, 0, 0, 0)),
+                            LastUpdated = new DateTimeOffset(new DateTime(2024, 7, 28, 20, 42, 43, 833, DateTimeKind.Unspecified).AddTicks(6428), new TimeSpan(0, 7, 0, 0, 0)),
                             SellPrice = 1400m,
                             Type = "SCJ"
                         },
@@ -440,7 +443,7 @@ namespace BusinessObjects.Migrations
                             GoldId = 3,
                             BuyPrice = 1400m,
                             City = "Ha Noi",
-                            LastUpdated = new DateTimeOffset(new DateTime(2024, 7, 29, 0, 11, 32, 242, DateTimeKind.Unspecified).AddTicks(4728), new TimeSpan(0, 7, 0, 0, 0)),
+                            LastUpdated = new DateTimeOffset(new DateTime(2024, 7, 28, 20, 42, 43, 833, DateTimeKind.Unspecified).AddTicks(6430), new TimeSpan(0, 7, 0, 0, 0)),
                             SellPrice = 1600m,
                             Type = "18k"
                         });
@@ -491,7 +494,7 @@ namespace BusinessObjects.Migrations
 
                     b.HasIndex("JewelryTypeId");
 
-                    b.ToTable("Jewelries", (string)null);
+                    b.ToTable("Jewelries");
 
                     b.HasData(
                         new
@@ -546,7 +549,7 @@ namespace BusinessObjects.Migrations
 
                     b.HasIndex("JewelryId");
 
-                    b.ToTable("JewelryCounters", (string)null);
+                    b.ToTable("JewelryCounters");
                 });
 
             modelBuilder.Entity("BusinessObjects.Models.JewelryMaterial", b =>
@@ -586,7 +589,7 @@ namespace BusinessObjects.Migrations
 
                     b.HasIndex("JewelryId");
 
-                    b.ToTable("JewelryMaterials", (string)null);
+                    b.ToTable("JewelryMaterials");
 
                     b.HasData(
                         new
@@ -626,7 +629,7 @@ namespace BusinessObjects.Migrations
 
                     b.HasKey("JewelryTypeId");
 
-                    b.ToTable("JewelryTypes", (string)null);
+                    b.ToTable("JewelryTypes");
 
                     b.HasData(
                         new
@@ -709,7 +712,7 @@ namespace BusinessObjects.Migrations
 
                     b.HasKey("PromotionId");
 
-                    b.ToTable("Promotions", (string)null);
+                    b.ToTable("Promotions");
 
                     b.HasData(
                         new
@@ -717,8 +720,8 @@ namespace BusinessObjects.Migrations
                             PromotionId = 1,
                             Description = "Giảm giá 10%",
                             DiscountRate = 1m,
-                            EndDate = new DateTimeOffset(new DateTime(2024, 8, 8, 0, 11, 32, 242, DateTimeKind.Unspecified).AddTicks(4600), new TimeSpan(0, 7, 0, 0, 0)),
-                            StartDate = new DateTimeOffset(new DateTime(2024, 7, 29, 0, 11, 32, 242, DateTimeKind.Unspecified).AddTicks(4546), new TimeSpan(0, 7, 0, 0, 0)),
+                            EndDate = new DateTimeOffset(new DateTime(2024, 8, 7, 20, 42, 43, 833, DateTimeKind.Unspecified).AddTicks(6336), new TimeSpan(0, 7, 0, 0, 0)),
+                            StartDate = new DateTimeOffset(new DateTime(2024, 7, 28, 20, 42, 43, 833, DateTimeKind.Unspecified).AddTicks(6285), new TimeSpan(0, 7, 0, 0, 0)),
                             Type = "Giảm giá"
                         },
                         new
@@ -726,8 +729,8 @@ namespace BusinessObjects.Migrations
                             PromotionId = 2,
                             Description = "Giảm giá 20%",
                             DiscountRate = 2m,
-                            EndDate = new DateTimeOffset(new DateTime(2024, 8, 8, 0, 11, 32, 242, DateTimeKind.Unspecified).AddTicks(4612), new TimeSpan(0, 7, 0, 0, 0)),
-                            StartDate = new DateTimeOffset(new DateTime(2024, 7, 29, 0, 11, 32, 242, DateTimeKind.Unspecified).AddTicks(4611), new TimeSpan(0, 7, 0, 0, 0)),
+                            EndDate = new DateTimeOffset(new DateTime(2024, 8, 7, 20, 42, 43, 833, DateTimeKind.Unspecified).AddTicks(6350), new TimeSpan(0, 7, 0, 0, 0)),
+                            StartDate = new DateTimeOffset(new DateTime(2024, 7, 28, 20, 42, 43, 833, DateTimeKind.Unspecified).AddTicks(6349), new TimeSpan(0, 7, 0, 0, 0)),
                             Type = "Giảm giá"
                         },
                         new
@@ -735,8 +738,8 @@ namespace BusinessObjects.Migrations
                             PromotionId = 3,
                             Description = "Giảm giá 30%",
                             DiscountRate = 3m,
-                            EndDate = new DateTimeOffset(new DateTime(2024, 8, 8, 0, 11, 32, 242, DateTimeKind.Unspecified).AddTicks(4617), new TimeSpan(0, 7, 0, 0, 0)),
-                            StartDate = new DateTimeOffset(new DateTime(2024, 7, 29, 0, 11, 32, 242, DateTimeKind.Unspecified).AddTicks(4615), new TimeSpan(0, 7, 0, 0, 0)),
+                            EndDate = new DateTimeOffset(new DateTime(2024, 8, 7, 20, 42, 43, 833, DateTimeKind.Unspecified).AddTicks(6353), new TimeSpan(0, 7, 0, 0, 0)),
+                            StartDate = new DateTimeOffset(new DateTime(2024, 7, 28, 20, 42, 43, 833, DateTimeKind.Unspecified).AddTicks(6352), new TimeSpan(0, 7, 0, 0, 0)),
                             Type = "Giảm giá"
                         });
                 });
@@ -777,7 +780,7 @@ namespace BusinessObjects.Migrations
 
                     b.HasIndex("BillId");
 
-                    b.ToTable("Transactions", (string)null);
+                    b.ToTable("Transactions");
                 });
 
             modelBuilder.Entity("BusinessObjects.Models.User", b =>
@@ -825,7 +828,7 @@ namespace BusinessObjects.Migrations
 
                     b.HasIndex("CounterId");
 
-                    b.ToTable("Users", (string)null);
+                    b.ToTable("Users");
 
                     b.HasData(
                         new
@@ -837,17 +840,17 @@ namespace BusinessObjects.Migrations
                             Gender = "Male",
                             Password = "12345678",
                             RoleId = 1,
-                            Status = true
+                            Status = false
                         },
                         new
                         {
                             UserId = 2,
-                            Code = "MANAGER",
-                            Email = "manager@gmail.com",
-                            FullName = "MANAGER",
+                            Code = "USER",
+                            Email = "user@gmail.com",
+                            FullName = "USER",
                             Password = "12345678",
                             RoleId = 2,
-                            Status = true
+                            Status = false
                         },
                         new
                         {
@@ -858,7 +861,7 @@ namespace BusinessObjects.Migrations
                             FullName = "STAFF",
                             Password = "12345678",
                             RoleId = 3,
-                            Status = true
+                            Status = false
                         });
                 });
 
@@ -893,7 +896,7 @@ namespace BusinessObjects.Migrations
 
                     b.HasIndex("JewelryId");
 
-                    b.ToTable("Warranties", (string)null);
+                    b.ToTable("Warranties");
                 });
 
             modelBuilder.Entity("BusinessObjects.Models.Bill", b =>

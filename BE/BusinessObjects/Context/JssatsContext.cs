@@ -19,7 +19,7 @@ namespace BusinessObjects.Context
             {
                 //optionsBuilder.UseSqlServer(GetConnectionString());
                 //optionsBuilder.UseNpgsql(GetConnectionString());
-                optionsBuilder.UseSqlServer("Server=LAPTOP-L44SS51U\\GIANG;Uid=sa;Pwd=12345;Database=JSSATS;TrustServerCertificate=True");
+                optionsBuilder.UseSqlServer("Server=(local);Uid=sa;Pwd=12345;Database=JSSATS;TrustServerCertificate=True");
                 //optionsBuilder.UseNpgsql("Host=aws-0-ap-southeast-1.pooler.supabase.com; Database=postgres; Code=postgres.gfjsnspjzlcfdrzxxksm; Password=Akaka0406+++");
 
             }

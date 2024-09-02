@@ -6,7 +6,7 @@ namespace BusinessObjects.DTO.ResponseDto;
 public class JewelryResponseDto
 {
     public int JewelryId { get; set; }
-    // public string? Name { get; set; }
+    public string? Name { get; set; }
     public string? JewelryType { get; set; }
     public string? Barcode { get; set; }
     public decimal? LaborCost { get; set; }

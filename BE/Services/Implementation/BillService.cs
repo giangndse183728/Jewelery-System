@@ -168,7 +168,7 @@ namespace Services.Implementation
             var transaction = Context.Database.BeginTransaction();
             try
             {
-                customer.Point += (int)(bill.TotalAmount / 1000);
+                customer.Point += 100;
                 Context.Customers.Update(customer);
                 await Context.SaveChangesAsync();
 
